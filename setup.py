@@ -1,7 +1,35 @@
+"""
+It is impossible to properly install this package in buildout 1.3.x.
+
+This package installs fine with pip.
+
+::
+
+    >>> pip install tompoes
+    >>> tom
+    setup(script=['bin/tom']) works!
+    >>> tom_main
+    entry_points console_scripts works!
+
+However it is not possible to properly install it in a buildout.
+
+::
+
+    >>> python bootstrap.py
+    >>> ./bin/buildout -v
+    >>> ./bin/tom
+    -bash: ./bin/tom: No such file or directory
+    >>> ./bin/tom_main
+    Traceback (most recent call last):
+      File "./bin/tom_main", line 29, in <module>
+        import tompoes
+    ImportError: No module named tompoes
+    
+"""
 from setuptools import setup, find_packages
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 
 setup(
@@ -9,14 +37,14 @@ setup(
     name='tompoes',
     # extract version from module.
     version=__version__,
-    description="Tom is een poes en hij is lief.",
-    long_description="(Heel lief zelfs)",
+    description="It is impossible to properly install this package in buildout 1.3.x.",
+    long_description=__doc__,
     classifiers=[],
     keywords='',
     author='Lars van de Kerkhof',
     author_email='lars@permanentmarkers.nl',
     url='',
-    license='',
+    license='Public Domain',
     # include all packages in the egg, except the test package.
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
     # include non python files
@@ -33,6 +61,6 @@ setup(
         ]
     },
     scripts=[
-        'scrips/tom',
+        'scripts/tom',
     ],
 )
