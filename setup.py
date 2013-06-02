@@ -1,5 +1,5 @@
 """
-It is impossible to properly install this package in buildout 1.3.x.
+It is impossible to properly install this package in buildout 1.6.x.
 
 This package installs fine with pip.
 
@@ -24,7 +24,10 @@ However it is not possible to properly install it in a buildout.
       File "./bin/tom_main", line 29, in <module>
         import tompoes
     ImportError: No module named tompoes
-    
+
+    Seems like a problem in buildout.easy_install.
+
+
 """
 from setuptools import setup, find_packages
 
@@ -37,7 +40,7 @@ setup(
     name='tompoes',
     # extract version from module.
     version=__version__,
-    description="It is impossible to properly install this package in buildout 1.3.x.",
+    description="It is impossible to properly install this package in buildout 1.6.x.",
     long_description=__doc__,
     classifiers=[],
     keywords='',
