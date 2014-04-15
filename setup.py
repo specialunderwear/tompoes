@@ -50,6 +50,7 @@ setup(
     license='Public Domain',
     # include all packages in the egg, except the test package.
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+    py_modules=['tompoes'],
     # include non python files
     include_package_data=True,
     zip_safe=False,
