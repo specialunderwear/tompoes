@@ -20,10 +20,7 @@ However it is not possible to properly install it in a buildout.
     >>> ./bin/tom
     -bash: ./bin/tom: No such file or directory
     >>> ./bin/tom_main
-    Traceback (most recent call last):
-      File "./bin/tom_main", line 29, in <module>
-        import tompoes
-    ImportError: No module named tompoes
+    "entry_points console_scripts works!"
 
     Seems like a problem in buildout.easy_install.
 
@@ -32,7 +29,7 @@ However it is not possible to properly install it in a buildout.
 from setuptools import setup, find_packages
 
 
-__version__ = "0.0.2"
+__version__ = "0.0.4"
 
 
 setup(
@@ -56,7 +53,7 @@ setup(
     zip_safe=False,
     # specify dependencies
     install_requires=[
-        'distribute',
+        'setuptools',
     ],
     # generate scripts
     entry_points={
