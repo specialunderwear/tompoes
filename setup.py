@@ -14,7 +14,6 @@ This package installs fine with pip.
 However it is not possible to properly install it in a buildout.
 
 ::
-
     >>> python bootstrap.py
     >>> ./bin/buildout -v
     >>> ./bin/tom
@@ -29,7 +28,7 @@ However it is not possible to properly install it in a buildout.
 from setuptools import setup, find_packages
 
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 
 
 setup(
@@ -37,7 +36,7 @@ setup(
     name='tompoes',
     # extract version from module.
     version=__version__,
-    description="It is impossible to properly install this package in buildout 1.6.x.",
+    description="It is impossible to properly install this package as a develop egg or a mr.developer source, in buildout 2.0",
     long_description=__doc__,
     classifiers=[],
     keywords='',
