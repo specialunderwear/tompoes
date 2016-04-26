@@ -57,7 +57,12 @@ setup(
         '1ee>=1.0.0',
         '1==1.2.0',
         'abn<=0.3.2',
-        'aaargh<0.6.0'
+        'aaargh<0.6.0',
+        'pyyaml',
+        'pyzmq',
+        'pycrypto',
+        'python-debian',
+        'python-dateutil'
     ],
     # generate scripts
     entry_points={
